@@ -28,7 +28,7 @@ public class AegisEngine {
         if (state == CircuitState.OPEN &&
                 stateHolder.canAttemptReset(policy.cooldown())) {
 
-            log.warn("AEGIS TRANSITION: OPEN → HALF_OPEN (cooldown elapsed)");
+            log.warn("AEGIS TRANSITION:OPEN → HALF_OPEN (cooldown elapsed)");
             stateHolder.transitionTo(CircuitState.HALF_OPEN);
             metrics.reset();
             return true;
